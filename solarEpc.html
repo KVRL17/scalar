@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLAR EPC</title>
+      <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">    
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">    
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="css/styles.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+<!-- social media icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- footers icons for address -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
+  <style>
+    /* Overall styling for the contact info section */
+    .contact-info-container {
+      display: flex;
+      justify-content: space-between;  /* Distribute space between logo and contact info */
+      align-items: center;
+      background-color: #f7f7f4;
+      padding: 5px;
+      border-radius: 10px;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      margin: 5px 0;
+      width: 90%;
+      flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin: 0 30px; /* Adjusted space */
+    }
+
+    .contact-info i {
+      font-size: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info i:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .contact-info a {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #007bff;
+    }
+
+    .contact-info span {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .contact-info-mail i {
+      background-color: #ff6347; /* Tomato color for mail */
+    }
+
+    .contact-info-phone i {
+      background-color: #32cd32; /* Lime green for phone */
+    }
+
+    .contact-info-location i {
+      background-color: #ffa500; /* Orange for location */
+    }
+
+    /* Logo styling */
+    .logo-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 20px; /* Adjusted space between logo and contact info */
+    }
+
+    .logo-container img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .contact-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        justify-content: center;
+      }
+
+      .contact-info {
+        margin: 5px 0;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .contact-info i {
+        font-size: 25px;
+        padding: 8px;
+      }
+
+      .contact-info a, .contact-info span {
+        font-size: 16px;
+      }
+
+      .logo-container img {
+        max-width: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-info-container {
+        padding: 10px;
+      }
+
+      .contact-info {
+        margin: 3px 0;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .contact-info i {
+        font-size: 20px;
+        padding: 6px;
+      }
+
+      .contact-info a, .contact-info span {
+        font-size: 14px;
+      }
+
+      .logo-container img {
+        max-width: 80px;
+      }
+
+      .contact-info-phone {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-info-phone a {
+        margin: 2px 0;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .contact-info-container {
+        width: 100%;
+        padding: 25px;
+      }
+    }
+	cottage-card {
+    border: 2px solid white; /* You can adjust the color and thickness */
+  </style>
+  
+  <style>
+  .row {
+  display: flex;
+  
+}
+
+.column {
+  flex: 50%;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+/* Adjust text content styling for better visual balance with images */
+.column h1 {
+  font-size: 2rem; /* Increase heading font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 1.2rem; /* Increase paragraph font size */
+  line-height: 1.8; /* Improve readability */
+  margin-bottom: 15px;
+  color: #333; /* Slightly darker text for better contrast */
+}
+
+/* Ensure images and text align neatly */
+.column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: Add a subtle rounding to images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a polished look */
+}
+
+/* Make rows have some space between content */
+.row {
+  margin-bottom: 40px; /* Add spacing between rows */
+}
+
+/* Button styling */
+.btn-enquire-now a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem; /* Make button text larger */
+}
+
+.btn-enquire-now {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #007bff; /* Match branding color */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enquire-now:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for better viewing on smaller screens */
+@media (max-width: 768px) {
+  .column h1 {
+    font-size: 1.8rem;
+  }
+
+  .column p {
+    font-size: 1.1rem;
+  }
+}
+  </style>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  /****************** Section Styling ******************/
+  .cottages-section {
+    padding: 40px 10%;
+  }
+  
+  /****************** Row and Column Styling ******************/
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .column h1 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .column p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /****************** Button Styling ******************/
+  .btn-enquire-now {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn-enquire-now:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /****************** Responsive Styling ******************/
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .column {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .btn-enquire-now {
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+  }
+  </style>  
+</head>
+<body>
+
+
+<div class="cottages-wrapper">
+        <section class="cottages-section">
+            
+			<h1 class="m-b-20" style="text-align: center;"><strong>SOLAR EPC</strong></h1>
+            <div class="cottages-container">
+				
+     <div class="row">
+		<div class="column" >
+            <h1>Detailed Design & Engineering</h1>
+            <p>At Scaler Energy, we believe a perfect design is the foundation of every successful solar project. Our process begins by understanding your unique requirements, conducting a comprehensive site survey, and assessing local weather conditions.</p>
+			<p >Our experienced team then analyzes the site’s power generation potential based on available rooftop or land area and electricity consumption patterns (Load Profile). This detailed analysis ensures an optimized engineering design tailored to maximize efficiency and performance for your energy needs.</p>
+       </div>
+		<div class="column">
+		<img src="images/SOLAR EPC1.jpg" style="width: 98% !important;"></div>
+	</div>
+</br></br></br>
+<div class="row">
+<div class="column" >
+
+  <img src="images/solar epc2.jpg" style="width: 98% !important;">
+
+  </div>
+		<div class="column" >
+            <h1>Procurement of Components</h1>
+            <p>Scaler Energy ensures the highest quality standards in sourcing solar energy components for every project. As a trusted one-stop solution for all solar needs, we procure top-grade materials while accommodating customer preferences through a flexible and customized procurement process.</p>
+			<p >Our commitment to performance and reliability extends to offering end-to-end services, ensuring that every solar plant delivers optimal efficiency and long-term value for our customers.</p>
+       </div>
+  
+</div>
+</br></br></br>
+<div class="row">
+		<div class="column" >
+            <h1>Installation & Commissioning</h1>
+            <p>At Scaler Energy, our skilled engineers bring extensive expertise in diverse construction projects, including distributed solar systems, solar farms, and energy storage solutions.</p>
+			<p >We specialize in delivering customized renewable energy projects tailored to meet unique customer requirements. Our experienced team ensures precise installation, optimizing system efficiency for seamless operation throughout its lifetime. With a focus on quality and performance, Scaler Energy is committed to delivering fast project execution without compromising on industry-leading standards.</p>
+       </div>
+  <div class="column">
+  <img src="images/solar epc 3.jpg" style="width: 98% !important;"></div>
+</div>
+</br></br></br>
+					<center>
+                    
+					<button class="btn btn-primary btn-enquire-now">
+					<a  href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Scalar%2Energy%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?" 
+					target="_blank"> <strong>ENQUIRE NOW</strong></a>
+					</button>
+					</center>
+                    </div>
+             
+					
+									
+		</div>
+        </section>
+    </div>
+	
+	
+	
+	
+				
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Contact Info - Logo Left</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Overall styling for the contact info section */
+    .contact-info-container {
+      display: flex;
+      justify-content: space-between;  /* Distribute space between logo and contact info */
+      align-items: center;
+      background-color: #f7f7f4;
+      padding: 5px;
+      border-radius: 10px;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      margin: 5px 0;
+      width: 90%;
+      flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin: 0 30px; /* Adjusted space */
+    }
+
+    .contact-info i {
+      font-size: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info i:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .contact-info a {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #007bff;
+    }
+
+    .contact-info span {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .contact-info-mail i {
+      background-color: #ff6347; /* Tomato color for mail */
+    }
+
+    .contact-info-phone i {
+      background-color: #32cd32; /* Lime green for phone */
+    }
+
+    .contact-info-location i {
+      background-color: #ffa500; /* Orange for location */
+    }
+
+    /* Logo styling */
+    .logo-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 20px; /* Adjusted space between logo and contact info */
+    }
+
+    .logo-container img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .contact-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        justify-content: center;
+      }
+
+      .contact-info {
+        margin: 5px 0;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .contact-info i {
+        font-size: 25px;
+        padding: 8px;
+      }
+
+      .contact-info a, .contact-info span {
+        font-size: 16px;
+      }
+
+      .logo-container img {
+        max-width: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-info-container {
+        padding: 10px;
+      }
+
+      .contact-info {
+        margin: 3px 0;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .contact-info i {
+        font-size: 20px;
+        padding: 6px;
+      }
+
+      .contact-info a, .contact-info span {
+        font-size: 14px;
+      }
+
+      .logo-container img {
+        max-width: 80px;
+      }
+
+      .contact-info-phone {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-info-phone a {
+        margin: 2px 0;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .contact-info-container {
+        width: 100%;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contact Info Section with Logo -->
+  <div class="contact-info-container">
+    <div class="logo-container">
+      <img src="images/logo1.jpg" alt="Company Logo">
+    </div>
+    <div class="contact-info contact-info-mail">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:sales@scalerenergy.in">sales@scalerenergy.in</a>
+    </div>
+    <div class="contact-info contact-info-location">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Coimbatore <br> Thiruvannamalai</span>
+    </div>
+    <div class="contact-info contact-info-phone">
+      <i class="fas fa-phone-alt"></i>
+      <a href="tel:+919500483614">9500483614,<br>9566818330</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+<script>
+  // Function to get the current date and time in IST (12-hour format with AM/PM)
+  function updateDateTime() {
+    const now = new Date();
+  
+    // Convert to IST
+    const utcOffsetInMilliseconds = now.getTime() + now.getTimezoneOffset() * 60000;
+    const istDate = new Date(utcOffsetInMilliseconds + (5.5 * 60 * 60 * 1000)); // Add 5 hours 30 minutes for IST
+  
+    // Get day, month, year, and time
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+    const dayName = days[istDate.getDay()];
+    const day = istDate.getDate();
+    const month = months[istDate.getMonth()];
+    const year = istDate.getFullYear();
+  
+    // Convert hours to 12-hour format
+    let hours = istDate.getHours();
+    const minutes = String(istDate.getMinutes()).padStart(2, '0');
+    const seconds = String(istDate.getSeconds()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12; // Convert 0 to 12 for 12-hour format
+  
+    // Combine into a readable format
+    return `As on ${dayName}, ${day} ${month}, ${year}, Current Time: ${hours}:${minutes}:${seconds} ${ampm} IST`;
+  }
+  
+  // Function to display the date and time
+  function displayDateTime() {
+    const dateTimeText = updateDateTime();
+    document.getElementById('scrolling-date').textContent = dateTimeText;
+  }
+  
+  // Update the date and time every second
+  setInterval(displayDateTime, 1000);
+  
+  // Display the initial date and time immediately
+  displayDateTime();
+  </script>
+<!-- Start header -->
+
+  
+<div class="scrolling-text">
+  <span id="scrolling-date">Loading...</span>
+  </div>
+<header class="top-navbar">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+          <div class="container">
+      
+              <a class="navbar-brand" href="index.html">
+                  <img src="images/logo1.jpg" alt="" style="width: 100px;" />
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbars-rs-food">
+                  <ul class="navbar-nav ml-auto d-flex align-items-center">
+                      <li class="nav-item"><a class="nav-link" href=""><strong>Home</strong></a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown"><strong>Products</strong></a>
+            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+              <a class="dropdown-item" href="">Solar Panels</a>
+              <a class="dropdown-item" href="">Solar Inverter</a>
+              <a class="dropdown-item" href="">Solar Battery</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown"><strong>Solutions</strong></a>
+            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+              <a class="dropdown-item" href="">Solar EPC</a>
+              
+            </div>
+          </li>
+                      <li class="nav-item"><a class="nav-link" href="roomsdec.html"><strong></strong></a></li>
+                      <li class="nav-item"><a class="nav-link" href="events.html"><strong>ROI Calculator</strong></a></li>
+                      <li class="nav-item"><a class="nav-link" href="media.html"><strong>Gallery</strong></a></li>
+                      <li class="nav-item"><a class="nav-link" href="aboutus.html"><strong>About Us</strong></a></li>
+                      <li class="nav-item"><a class="nav-link" href="contactus.html"><strong>Contact Us</strong></a></li>
+                      <li class="nav-item"><button class="btn btn-primary btn-enquire-now"><a  href="contactus.html">ENQUIRE NOW</a></button></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  
+
+</header>

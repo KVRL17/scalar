@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
+@import url('https://fonts.googleapis.com/css?family=Athiti:400,500,600');
+
+/* imported animations */
+
+@import url(animate.css);
+@import url(font-awesome.min.css);
+@import url(superslides.css);
+@import url(baguetteBox.min.css);
+
+body {
+    color: #666666;
+    font-size: 15px;
+    font-family: 'Athiti', sans-serif;
+    line-height: 1.80857;
+}
+
+
+a {
+    color: #1f1f1f;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: 120% !important;
+    color: #1f1f1f;
+    margin: 0
+}
+
+h1 {
+    font-size: 24px
+}
+
+h2 {
+    font-size: 22px
+}
+
+h3 {
+    font-size: 18px
+}
+
+h4 {
+    font-size: 16px
+}
+
+h5 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 13px
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none!important;
+    opacity: 1
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    opacity: .8
+}
+
+a {
+    color: #1f1f1f;
+    text-decoration: none;
+    outline: none;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-custom {
+    margin-top: 20px;
+    background-color: transparent !important;
+    border: 2px solid #ddd;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767676;
+    margin: 0;
+    padding: 0;
+}
+
+blockquote {
+    margin: 20px 0 20px;
+    padding: 30px;
+}
+
+ul, li, ol{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+button:focus{
+	outline: none;
+}
+
+.form-control::-moz-placeholder {
+    color: #2a2a2a;
+    opacity: 1;
+}
+
+/* Here onwards header and navbar css if you want make changes do changes here swathi */
+.top-navbar{
+	position: relative;
+	z-index: 10;
+}
+
+.top-navbar .navbar{
+	padding: 15px 0px;
+	position: fixed;
+	width: 100%;
+	transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	z-index: 100;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-link{
+	color: #010101;
+	font-size: 18px;
+	padding: 0px 10px;
+	border-radius: 4px;
+}
+
+.top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
+	background: white;
+	color: black;
+}
+.top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link{
+	background: #d0a772;
+	color: black;
+	border-radius: 4px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+	border: none;
+	 box-shadow: 2px 5px 6px rgba(0,0,0,0.5);
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover{
+	background: #d0a772;
+	color: black;
+}
+.navbar-light .navbar-toggler:hover{
+	background: #cfa671;
+}
+/*nav bar bootstrap buttons  */
+
+.btn-skyblue {
+    background-color: #64cbf3; /* Sky blue color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn-skyblue:hover {
+    background-color: green; /* Darker shade on hover */
+}
+/* image slider css swathi it is if you want changes do make changes here */
+
+.cover-slides{
+	height: 100vh;
+}
+.slides-navigation a {
+	background: #cfa671;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: 50%;
+    font-size: 20px;
+    display: block;
+    color: #fff;
+	line-height: 80px;
+	text-align: center;
+    transition: all .3s ease-in-out;
+}
+.slides-navigation a i{
+	font-size: 40px;
+}
+.slides-navigation a:hover {
+	background: #010101;
+}
+.cover-slides .container{
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+.cover-slides .container > .row {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.cover-slides .container > .row {
+    height: 100%;
+}
+
+.btn{
+	text-transform: uppercase;
+	padding: 19px 36px;
+}
+.btn{
+	display: inline-block;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 2px solid transparent;
+	padding: 12px 30px;
+	font-size: 16px;
+	line-height: 1.5;
+	border-radius: .1875rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn-outline-new-white {
+    color: #fff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #cfa671;
+}
+.btn-outline-new-white:hover {
+    color: #ffffff;
+    background-color: #cfa671;
+    border-color: #cfa671;
+}
+
+.overlay-background {
+    background: #333;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+	opacity: 0.5;
+}
+
+.cover-slides h1{
+	font-family: 'Arbutus Slab', serif;
+	font-weight: 500;
+	font-size: 64px;
+	color: #fff;
+}
+.cover-slides p{
+	font-size: 18px;
+	color: #fff;
+}
+.slides-pagination a{
+	border: 2px solid #ffffff;
+}
+.slides-pagination a.current{
+	background: #cfa671;
+	border: 2px solid #cfa671;
+}
+
+/* About Us Content swathi */
+
+.about-section-box{
+	padding: 70px 0px;
+}
+/* .about-section-box .img-fluid{
+	box-shadow: -10px -10px 0px #d0a772;
+} */
+/* .inner-column{} */
+.inner-column h1{
+	font-family: 'Arbutus Slab', serif;
+	font-size: 30px;
+	color: #010101;
+}
+.inner-column h1 span{
+	color: #d0a772;
+}
+.inner-column h4{
+	font-size: 16px;
+	font-weight: 500;
+}
+.inner-column p{
+	font-size: 18px;
+}
+.inner-column .btn-outline-new-white{
+	color: #d0a772;
+}
+.inner-column .btn-outline-new-white:hover{
+	color: #ffffff;
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: #d0a772;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+	font-size: 30px;
+}
+
+/* footer css */
+
+.footer {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 20px 0;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer a:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer .social-links a {
+    font-size: 1.25rem;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer .col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .col {
+        margin-bottom: 20px;
+    }
+}
+
+/* footer ends / / Custom styles for social media links */
+          .social-links {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+            color: #333;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #007bff; /* Change to desired hover color */
+        }
+
+
+
+
+/* contact us css starts */
+
+        .container {
+            margin-top: 10px;
+        }
+        label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .was-validated .form-control:invalid:hover ~ .invalid-feedback {
+            display: block;
+            font-weight: bold;
+        } 
+        .spinner-border {
+            animation: fade-out 0.5s forwards;
+        }
+        @keyframes fade-out {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        } 
+
+
+        /* Container styling */
+
+
+/* #whatsapp */
+
+        
+.whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.image-containerr {
+    display: flex;
+    gap: 10px;
+}
+
+.image-containerr img {
+    width: calc(33.33% - 10px);
+    height: 250px;
+    object-fit: cover;
+}
+
