@@ -44,7 +44,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
 	
-	
     .title {
     margin-top: 20px; /* Adjusts space above the title */
     color: #4a90e2; /* Change this to your desired color */
@@ -108,6 +107,126 @@ i{
       }
     }
 </style>
+<style>
+    .maincard {
+      position: relative;
+      background-color: white;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+	  width: 50%;
+    }
+
+    .maincard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-custom {
+      background-color: #06ccf8;
+      color: white;
+      border: none;
+      font-size: 15px;
+      padding: 10px 20px;
+      width: 100%;
+    }
+
+    .btn-custom:hover {
+      color: white;
+    }
+
+    .btn-eb {
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+      padding: 10px 10px;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+
+    .btn-eb:hover {
+      background-color: #0905a1;
+      color: white;
+    }
+
+    .btn-eb.active {
+      background-color: #0905a1;
+      color: white;
+    }
+
+    .icon-style {
+      font-size: 2rem;
+      color: orange;
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+
+    .address-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 50px;
+    }
+
+    .bi.bi-telephone-fill {
+      color: green;
+      font-size: 1.5rem;
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+
+    .ring-container {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      margin-left: 50px;
+    }
+
+    .bi.bi-envelope-fill {
+      color: orange;
+      font-size: 1.5rem;
+      margin-right: 8px;
+      margin-left: 20px;
+    }
+
+    .custom-margin-top {
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 300px;
+      height: 200px;
+      border: 0;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .row {
+        display: block;
+      }
+
+      iframe {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+      }
+
+      .icon-style {
+        font-size: 20px;
+        margin-right: 8px;
+      }
+
+      h4 {
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      iframe {
+        width: 100%;
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -260,6 +379,251 @@ i{
 		</ul>
 	</div>
 	<!-- End slides -->
+
+	<div style="background-color: #0000A0; background-size: cover; background-position: center; width: 100%;">
+		<div class="container my-5 maincard">
+		<div class="row">
+		  <!-- Form on the Right -->
+		  <div class="col-md-12">
+			<!-- content -->
+			 <h3>Planning to go solar now?</h3>
+			 <h3>Talk to us!</h3> 
+			 <p>Did anything in here peek your interest? If yes, all you have to do is to get in touch with us.</p>
+			 <p>Drop us a line, mail us your queries or walk into our office for a hot cup of coffee.</p>
+			 <h4>Send a Message</h4>
+			 <!-- content end -->
+			<div class="form-container">
+			  <form id="contactform">
+				<!-- Full Name -->
+				<div>
+				  <label for="name">Full Name <span class="text-danger">*</span></label>
+				  <input type="text" class="form-control bg-light" id="name" placeholder="Your Name">
+				  <span class="error-message text-danger" id="name-error"></span>
+				</div>
+	
+				<!-- Whatsapp Number -->
+				<div class="mt-3">
+				  <label for="whatsapp">Whatsapp Number <span class="text-danger">*</span></label>
+				  <input type="text" class="form-control bg-light" id="whatsappno" placeholder="Your Mobile Number">
+				  <span class="error-message text-danger" id="mobile-error"></span>
+				</div>
+				<div class="mt-3">
+					<label for="EB">Monthy Electricity Bill<span class="text-danger">*</span></label>
+					<!-- Hidden Input for Monthly Electricity Bill -->
+					<input type="hidden" id="electricity-bill" name="electricity-bill">
+					<span class="error-message text-danger" id="electricity-bill-error"></span>
+	
+					</div>
+				<!-- Buttons -->
+				<div >
+				  <button class="btn btn-eb" type="button" onclick="setElectricityBill(this, 'Less than ₹1500')">Less than ₹1500</button>
+				  <button class="btn btn-eb" type="button" onclick="setElectricityBill(this, '₹1500 - ₹2500')">₹1500 - ₹2500</button>
+				   <button class="btn btn-eb" type="button" onclick="setElectricityBill(this, '₹2500 - ₹4000')">₹2500 - ₹4000</button>
+				</div>
+				<div class=" mt-3">
+				  <button class="btn btn-eb" type="button" onclick="setElectricityBill(this, '₹4000 - ₹8000')">₹4000 - ₹8000</button>
+				  <button class="btn btn-eb" type="button" onclick="setElectricityBill(this, 'More than ₹8000')">More than ₹8000</button>
+				</div>
+	
+				<!-- Pincode and City -->
+				<div class="row mt-3">
+				  <div class="col-md-6">
+					<label for="pincode">Pincode <span class="text-danger">*</span></label>
+					<input type="text" class="form-control bg-light" id="pincode" placeholder="Your Pincode">
+					<span class="error-message text-danger" id="pincode-error"></span>
+				  </div>
+				  <div class="col-md-6">
+					<label for="city">City</label>
+					<input type="text" class="form-control bg-light" id="city" placeholder="Your City">
+					<span class="error-message text-danger" id="city-error"></span>
+				  </div>
+				</div>
+	
+				<!-- Email -->
+				<div class="mt-3">
+				  <label for="email">Email</label>
+				  <input type="email" class="form-control bg-light" id="email" placeholder="Your Email">
+				  <span class="error-message text-danger" id="email-error"></span>
+				</div>
+	
+				<!-- Submit Button -->
+				<div class="mt-4 text-center">
+				  <button type="submit" class="btn btn-primary">Yes! Reduce my electricity bill</button>
+				</div>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	  <script>
+		  function setElectricityBill(button, value) {
+	  // Remove active class from all buttons
+	  document.querySelectorAll('.btn-eb').forEach(function(btn) {
+		btn.classList.remove('active');
+	  });
+	
+	  // Add active class to the clicked button
+	  button.classList.add('active');
+	
+	  // Set the value in the hidden input field
+	  document.getElementById("electricity-bill").value = value;
+	
+	  // Clear any previous error message
+	  document.getElementById("electricity-bill-error").textContent = "";
+	}
+	
+	
+	
+		document.addEventListener("DOMContentLoaded", function() {
+		  document.getElementById("contactform").addEventListener("submit", function(event) {
+			event.preventDefault();
+	  
+			// Get input values
+			var name = document.getElementById("name").value.trim();
+			var whatsappno = document.getElementById("whatsappno").value.trim();
+			var pincode = document.getElementById("pincode").value.trim();
+			var city = document.getElementById("city").value.trim();
+			var email = document.getElementById("email").value.trim();
+			var electricityBill = document.getElementById("electricity-bill").value.trim();
+			var hasError = false;
+	  
+			// Validate inputs
+			if (!name) {
+			  document.getElementById("name-error").textContent = "Please enter your Name.";
+			  hasError = true;
+			} else {
+			  document.getElementById("name-error").textContent = "";
+			}
+	  
+			if (!whatsappno) {
+			  document.getElementById("mobile-error").textContent = "Please enter your WhatsApp number.";
+			  hasError = true;
+			} else {
+			  document.getElementById("mobile-error").textContent = "";
+			}
+	  
+			if (!pincode) {
+			  document.getElementById("pincode-error").textContent = "Please enter your Pincode.";
+			  hasError = true;
+			} else {
+			  document.getElementById("pincode-error").textContent = "";
+			}
+	  
+			if (!city) {
+			  document.getElementById("city-error").textContent = "Please enter your City.";
+			  hasError = true;
+			} else {
+			  document.getElementById("city-error").textContent = "";
+			}
+	  
+			if (!email) {
+			  document.getElementById("email-error").textContent = "Please enter your Email.";
+			  hasError = true;
+			} else {
+			  document.getElementById("email-error").textContent = "";
+			}
+			if (!electricityBill) {
+		  document.getElementById("electricity-bill-error").textContent = "Please select your monthly electricity bill.";
+		  hasError = true;
+		} else {
+		  document.getElementById("electricity-bill-error").textContent = "";
+		}
+	  
+			
+			if (!hasError) {
+			  var messageText = 
+				"Name: " + name + 
+				"%0AWhatsApp: " + whatsappno + 
+				"%0APincode: " + pincode + 
+				"%0ACity: " + city + 
+				"%0AEmail: " + email +
+				"%0AMonthly Electricity Bill: " + electricityBill;
+	  
+			  var whatsappUrl = "https://wa.me/9994985481?text=" + messageText;
+			  window.open(whatsappUrl, "_blank"); 
+			} else {
+			  console.log("Form submission stopped due to errors.");
+			}
+		  });
+		});
+	  </script>
+
+	<h1 style="text-align: center;"><b> ROI CALCULATOR </b><span></span></h1>
+	<div class="rcontainer">
+	<div class="card yellow">
+		<h2>Project Cost Details</h2>
+		<p>Estimated Project Cost</p>
+		<div class="slider-container">
+		<input type="range" class="slider" min="0" max="100">
+		</div>
+		<p>Subsidy</p>
+		<div class="slider-container">
+		<input type="range" class="slider" min="0" max="100">
+		</div>
+	</div>
+	<div class="card blue">
+		<h2>Rooftop Electricity Potentials</h2>
+		<p>Rooftop Area</p>
+		<div class="slider-container">
+		<input type="range" class="slider" min="0" max="100">
+		</div>
+		<p>Electricity Generation</p>
+		<div class="slider-container">
+		<input type="range" class="slider" min="0" max="100">
+		</div>
+	</div>
+	<div class="card green">
+		<h2>Savings</h2>
+		<p>Financial Savings</p>
+		<div class="slider-container">
+		<input type="range" class="slider" min="0" max="100">
+		</div>
+	</div>
+	</div>
+
+	<div class="custom-container" style="
+			max-width: 1300px;
+			margin: 50px auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+		"
+		>
+		<div class="row custom-row">
+			<!-- Left Image Column -->
+			<div class="col-md-5 col-lg-4">
+			<img
+				src="images/about us page.jpg"
+				alt="About Us"
+				class="img-fluid left-image"
+			/>
+			</div>
+			<!-- Right Content Column -->
+			<div class="col-md-7 col-lg-8 content-section">
+			<h2><b> Who We Are </b></h2>
+			<p class="para">
+				Scaler Energy specializes in delivering renewable energy solutions,
+				focusing on high-quality solar panels, advanced battery storage systems,
+				and efficient solar inverters. We provide tailored solutions for
+				residential, commercial, and industrial clients, helping them achieve
+				energy efficiency and sustainability. Our expertise also includes
+				supporting large-scale solar farms and working with government
+				organizations to drive clean energy initiatives locally.
+			</p>
+
+			<p class="para">
+				In addition to installations, we offer reliable solar and
+				energy-efficient products, ensuring seamless integration with modern
+				energy systems.
+			</p>
+			</div>
+		</div>
+		</div>
+
 	
 	
 <!-- Product page starts  -->
