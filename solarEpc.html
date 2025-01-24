@@ -39,7 +39,266 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
-    
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
+  <style>
+    /* Overall styling for the contact info section */
+    .contact-info-container {
+      display: flex;
+      justify-content: space-between;  /* Distribute space between logo and contact info */
+      align-items: center;
+      background-color: #f7f7f4;
+      padding: 5px;
+      border-radius: 10px;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      margin: 5px 0;
+      width: 90%;
+      flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin: 0 30px; /* Adjusted space */
+    }
+
+    .contact-info i {
+      font-size: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info i:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .contact-info a {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #007bff;
+    }
+
+    .contact-info span {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .contact-info-mail i {
+      background-color: #ff6347; /* Tomato color for mail */
+    }
+
+    .contact-info-phone i {
+      background-color: #32cd32; /* Lime green for phone */
+    }
+
+    .contact-info-location i {
+      background-color: #ffa500; /* Orange for location */
+    }
+
+    /* Logo styling */
+    .logo-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 20px; /* Adjusted space between logo and contact info */
+    }
+
+    .logo-container img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .contact-info-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        justify-content: center;
+      }
+
+      .contact-info {
+        margin: 5px 0;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .contact-info i {
+        font-size: 25px;
+        padding: 8px;
+      }
+
+      .contact-info a, .contact-info span {
+        font-size: 16px;
+      }
+
+      .logo-container img {
+        max-width: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-info-container {
+        padding: 10px;
+      }
+
+      .contact-info {
+        margin: 3px 0;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .contact-info i {
+        font-size: 20px;
+        padding: 6px;
+      }
+
+      .contact-info a, .contact-info span {
+        font-size: 14px;
+      }
+
+      .logo-container img {
+        max-width: 80px;
+      }
+
+      .contact-info-phone {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-info-phone a {
+        margin: 2px 0;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .contact-info-container {
+        width: 100%;
+        padding: 25px;
+      }
+    }
+	cottage-card {
+    border: 2px solid white; /* You can adjust the color and thickness */
+  </style>
+  
+  <style>
+  .row {
+  display: flex;
+  
+}
+
+.column {
+  flex: 50%;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+/* Adjust text content styling for better visual balance with images */
+.column h1 {
+  font-size: 2rem; /* Increase heading font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 1.2rem; /* Increase paragraph font size */
+  line-height: 1.8; /* Improve readability */
+  margin-bottom: 15px;
+  color: #333; /* Slightly darker text for better contrast */
+}
+
+/* Ensure images and text align neatly */
+.column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: Add a subtle rounding to images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a polished look */
+}
+
+/* Make rows have some space between content */
+.row {
+  margin-bottom: 40px; /* Add spacing between rows */
+}
+
+/* Button styling */
+.btn-enquire-now a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem; /* Make button text larger */
+}
+
+.btn-enquire-now {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #007bff; /* Match branding color */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enquire-now:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for better viewing on smaller screens */
+@media (max-width: 768px) {
+  .column h1 {
+    font-size: 1.8rem;
+  }
+
+  .column p {
+    font-size: 1.1rem;
+  }
+}
   </style>
   <style>
   body {
@@ -75,7 +334,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -160,7 +419,7 @@
 <div class="cottages-wrapper">
         <section class="cottages-section">
             
-			<h1 style="text-align: center;"><strong>SOLAR EPC</strong></h1>
+			<h1 class="m-b-20" style="text-align: center;"><strong>SOLAR EPC</strong></h1>
             <div class="cottages-container">
 				
      <div class="row">
