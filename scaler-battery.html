@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Batteries</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRJ7t2eW8KJbWtl9ZDP5Ul0RXGJjk1gYbF1DVYBo9"
+    crossorigin="anonymous"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .custom-container {
+      display: flex;
+      flex-wrap: nowrap; 
+      gap: 20px; 
+      padding: 2rem 1rem;
+    }
+
+    /* Content takes 60% */
+    .content-section {
+      flex: 0 0 60%; /* Content width */
+    }
+
+    /* Image takes 40% */
+    .image-section {
+      flex: 0 0 40%; /* Image width */
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+    }
+
+    /* Ensure the image fits well */
+    .left-image {
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px;
+    }
+
+    /* Features list styling */
+    .feature-list ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .feature-list li {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .custom-container {
+        flex-direction: column; 
+      }
+      .content-section, .image-section {
+        flex: 0 0 100%; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container custom-container">
+    <!-- Content Section -->
+    <div class="content-section">
+      <h2>Solar Batteries</h2>
+      <p>
+        The positive plate support in Ceil Tubular Batteries is cast at high pressure (100 Bar) on an imported HADI machine, ensuring void-free structure and consistent grain orientation, as well as protecting the plate support from anodic corrosion. As a result, improved reliability and longer life are assured. Ceil Tubular plates have a low antimony concentration, which minimizes the frequency of filling up and makes the battery low maintenance. This also keeps the float charging current low, lowering the overall energy required to keep the battery charged during standby float.
+      </p>
+      <h3>KEY FEATURES / SPECIFICATIONS</h3>
+      <ul>
+        <li>Available in Solar Tubular range</li>
+        <li>PPCP CONTAINER</li>
+        <li>Tubular Positive Plates</li>
+        <li>Pasted Negative Plates</li>
+        <li>High Porosity Envelope Separators</li>
+        <li>Microporous Ceramic Vent Plug</li>
+        <li>High Tensile, acid-resistant Polyester Gauntlets</li>
+        <li>Low Resistance Fasteners</li>
+        <li>Heavy-duty terminal</li>
+      </ul>
+      <p>
+        Explore our wide range of solar batteries designed to harness solar energy efficiently, ensuring optimal battery capacity for your home solar lighting system. Buy the best quality solar batteries from us and power your home with renewable energy.
+      </p>
+    </div>
+    <!-- Image Section -->
+    <div class="image-section">
+      <img
+        src="images/product - battery 1.webp"
+        alt="Solar Battery"
+        class="left-image"
+      />
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kaijXc2g5j6f4N5t4Bj9Dvb9AP9q5ZJ/QgqtSkKwHb1KwXmJ5HEbLgqC2jQM06J6"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>
