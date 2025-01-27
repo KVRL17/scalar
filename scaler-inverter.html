@@ -41,6 +41,29 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- footers icons for address -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">    
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">    
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="css/styles.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
         
         <style>
             .panel-default>.panel-heading {
@@ -58,7 +81,6 @@
                 font-size: 18px;
             }
             body{
-                padding:50px;
                 background:#fff;
             }
             .wrapper{
@@ -95,6 +117,16 @@
                 -moz-transform: rotate(180deg);
                 transform: rotate(180deg);
             }
+            @media screen  and (max-width: 768px){
+                .containerr{
+                    padding: 40px;
+                }
+            }
+            @media screen  and (max-width: 480px){
+                .containerr{
+                    padding: 40px;
+                }
+            }
         </style>
         <script>
             $('.panel-collapse').on('show.bs.collapse', function () {
@@ -109,13 +141,58 @@
 
     </head>
     <body>
+        <header class="top-navbar">
+		
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- <div class="scrolling-text">
+                    <span id="scrolling-date">Loading...</span>
+                  </div> -->
+    
+                <div class="container" style="margin-left: 0px;">
+                    
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo1.png" alt="" style="width: 139px;" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbars-rs-food">
+                        <ul class="navbar-nav ml-auto d-flex align-items-center">
+                            <li class="nav-item"><a class="nav-link" href=""><strong>Home</strong></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="dropdown-a" data-toggle="dropdown"><strong>Products</strong></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                    <a class="dropdown-item" href="products.html">Solar Panels</a>
+                                    <a class="dropdown-item" href="scaler-inverter.html">Solar Inverter</a>
+                                    <a class="dropdown-item" href="scaler-battery.html">Solar Battery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown"><strong>Solutions</strong></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                    <a class="dropdown-item" href="solarEpc.html">Solar EPC</a>
+                                    
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="roomsdec.html"><strong></strong></a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html"><strong>ROI Calculator</strong></a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html"><strong>Gallery</strong></a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html"><strong>About Us</strong></a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html"><strong>Contact Us</strong></a></li>
+                            <li class="nav-item"><button class="btn btn-primary btn-enquire-now"><a style="color: white;"  href="contactus.html">ENQUIRE NOW</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        </header>
 
 
-        <div >
-            <div class="container">
+        <div>
+            <div class="containerr" style="padding: 130px; padding-bottom: 10px;">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="m-b-40 text-center" ><strong>Solar Inverter</strong>  </h1>
+                        <h1 class="m-b-60 text-center" ><strong>Solar Inverter</strong>  </h1>
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="ac_charger_img">
@@ -166,7 +243,7 @@
 
                                 <div class="btn_ac btnEnquiryUps aos-init aos-animate">
 
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
 
 
@@ -177,7 +254,7 @@
                 </div>
             </div>
         </div>
-        <div class="ac_charger_section_as">
+        <div class="ac_charger_section_as" style="margin-top: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-md-6">
@@ -247,7 +324,7 @@
                                                                         </div>-->
                                     <div class="btn_ac btnEnquiryUps aos-init aos-animate">
 
-                                        <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                        <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +342,7 @@
                 </div>
             </div>
         </div>
-        <div class="ac_charger_section_as">
+        <div class="ac_charger_section_as" style="margin-top: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
@@ -319,7 +396,7 @@
                                     <!-- <button class="downloan_btn load_Btn">
                                         <a href="https://www.servotech.in/blog/wp-content/uploads/2024/11/Microsync-Micro-Inverter-Catalouge.pdf" target="_blank" rel="noreferrer">Download</a>
                                     </button> -->
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -328,7 +405,7 @@
             </div>
         </div>
     </div>
-    <div class="ac_charger_section_as">
+    <div class="ac_charger_section_as" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-6">
@@ -376,7 +453,7 @@
                                     <!-- <button class="downloan_btn load_Btn">
                                         <a href="https://www.servotech.in/blog/wp-content/uploads/2024/10/Servlith-series-Energy-Storage-Systems-Catalouge-1.pdf" target="_blank" rel="noreferrer">Download</a>
                                     </button> -->
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +471,7 @@
             </div>
         </div>
     </div>
-    <div class="ac_charger_section_as">
+    <div class="ac_charger_section_as" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6">
@@ -450,7 +527,7 @@
                                     <!-- <button class="downloan_btn load_Btn">
                                         <a href="https://www.servotech.in/blog/wp-content/uploads/2024/10/Sunfarm-series-Solar-Pump-Controller-1.pdf" target="_blank" rel="noreferrer">Download</a>
                                     </button> -->
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -459,7 +536,7 @@
             </div>
         </div>
     </div>
-    <div class="ac_charger_section_as">
+    <div class="ac_charger_section_as" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-6">
@@ -502,7 +579,7 @@
                                     <!-- <button class="downloan_btn load_Btn">
                                         <a href="https://servotech.in/blog/wp-content/uploads/2022/12/Copy-of-Elegant-Plus-curved-new-size.pdf" target="_blank" rel="noreferrer">Download</a>
                                     </button> -->
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -520,7 +597,7 @@
             </div>
         </div>
     </div>
-    <div class="ac_charger_section_as">
+    <div class="ac_charger_section_as" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6">
@@ -572,7 +649,7 @@
                                     <!-- <button class="downloan_btn load_Btn">
                                         <a href="https://servotech.in/blog/wp-content/uploads/2023/03/Flare-PCU-MPPT.pdf" target="_blank" rel="noreferrer">Download</a>
                                     </button> -->
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -581,7 +658,7 @@
             </div>
         </div>
     </div>
-    <div class="ac_charger_section_as">
+    <div class="ac_charger_section_as" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-6">
@@ -648,7 +725,7 @@
                                     <!--  <button class="downloan_btn load_Btn">
                                          <a href="https://servotech.in/blog/wp-content/uploads/2023/03/Fusion-Solar-Hybrid-Inverter.pdf" target="_blank" rel="noreferrer">Download</a>
                                      </button> -->
-                                    <button class="btn btn-primary btn-enquire-now">Enquire Now</button>
+                                    <button class="btn btn-primary btn-enquire-now"><a style="color: white;" href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?">Enquire Now</a></button>
                                 </div>
                             </div>
                         </div>
@@ -670,6 +747,97 @@
 
 </div>
 </div>
+
+<br />
+<div class="footer">
+	<div class="container">
+		<div class="footer-container">
+
+			<div class="col">
+				<a class="navbar-brand" href="index.html">
+                    <img src="images/logo1.png" alt="" style="width: 100px;" />
+                </a>
+				<h3>Get In Touch</h3>
+				<p>Scaler Energy</p>
+				<p><span style="color: #3498db;"> Visit Us: </span>67, veerakeralam road
+
+					linganur vadavalli post
+					coimbatore-641041
+					
+					</p>
+					<p><span style="color: #3498db;"> Visit Us: </span>1081/76, 4th Cross,
+
+						Swarnaboomi Layout,
+						Tiruvannamalai 606603
+						</p>
+				<p> <span style="color: #3498db;"> Call Us: </span>+91 9500483614, +91 566818330</p>
+				<p><span style="color: #3498db;"> Mail Us: </span>sales@scalerenergy.in</p>
+			
+				<div class="social-links">
+				   
+					<a href="https://www.facebook.com/profile.php?id=61568440108057&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/maanyaresort/profilecard/?igsh=MW5qbW0wbDJ2aGJwYg=="><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					
+				</div>
+			</div>
+			<div class="col">
+				<h3>Quick Links</h3>
+				<p><span class="text-color"><a href="index.html">Home</a></span></p>
+				<a href="">Products</a>
+				<a href="">Solutions</a>
+				<a href="roomsdec.html">ROI CALCULATOR</a>
+				<a href="media.html">Gallery</a>
+				<a href="aboutus.html">About US</a>
+				
+				<a href="contactus.html">Contact Us</a>
+			</div>
+			<div class="col">
+				<h3>Products</h3>
+				<a href="roomsdec.html">Solar Invertor</a>
+				<a href="media.html">Solar Battery</a>
+				<a href="aboutus.html">Solar Panels</a>
+				<!-- <p>Products</p>
+
+				<p><span style="color: #3498db;"> Call Us: </span>+91 936340<span style="font-weight: bold;color:#3498db">4445</span></p>
+				<p><span style="color: #3498db;"> Mail Us: </span>sales@maanyaresorts.com</p>
+					<p><span style="color: #3498db;"> Mail Us: </span>info@maanyaresorts.com</p> -->
+			</div>
+		</div>
+		<div class="copyright">
+			&copy; <span id="currentYear"></span> Scaler Energy, All Rights Reserved.
+		</div>
+		<script>
+			document.getElementById('currentYear').textContent = new Date().getFullYear();
+		</script>
+	</div>
+</div>
+<!-- Footer End -->
+
+
+	<div class="whatsapp-icon">
+		<a href="https://wa.me/+919363404445?text=Hello,%20I%20would%20like%20to%20enquire%20about%20the%20Services%20in%20Lorsan%2Training%20Could%20you%20provide%20more%20details%20on%20available%20Services%20%20the%20process?" target="_blank">
+			<img src="./images/whatsapp-logo.png" alt="WhatsApp Icon">
+		</a>
+	</div>
+
+	<!-- Do Add The Remaining -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+	<!-- ALL JS FILES -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="js/jquery.superslides.min.js"></script>
+	<script src="js/images-loded.min.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/baguetteBox.min.js"></script>
+	<script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
 
 
 

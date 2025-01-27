@@ -303,6 +303,7 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 10px 0;
+    font-weight: bold;
     color: #555;
   }
   
@@ -393,9 +394,201 @@
       font-size: 1rem;
     }
   }
+  /* CSS for the navbar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-navbarr {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbarr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbarr-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbarr-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbarr-collapse {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbarr-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navv-item {
+    position: relative;
+}
+
+.navv-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navv-link:hover {
+    color: #007bff;
+}
+
+.dropdownn-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdownn-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdownn-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdownn:hover .dropdownn-menu {
+    display: block;
+}
+
+.btn-enquire-now a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-enquire-now {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enquire-now:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbarr-toggler {
+        display: block;
+    }
+
+    .navbarr-collapse {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbarr-collapse.show {
+        display: flex;
+    }
+
+    .navbarr-nav {
+        flex-direction: column;
+    }
+
+    .dropdownn-menu {
+        position: static;
+    }
+}
   </style>  
 </head>
 <body>
+
+  <script>
+    // JavaScript for toggler functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbarr-toggler");
+    const navbarCollapse = document.querySelector(".navbarr-collapse");
+
+    toggler.addEventListener("click", function () {
+        navbarCollapse.classList.toggle("show");
+    });
+});
+  </script>
+  <header class="top-navbarr">
+		
+    <nav class="navbarr">
+        <div class="ncontainer">
+    
+            <a class="navbarr-brand" href="index.html">
+                <img src="images/logo1.png" alt="" style="width: 139px;" />
+            </a>
+            <button class="navbarr-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbarr-collapse" id="navbars-rs-food">
+                <ul class="navbarr-nav ml-auto d-flex align-items-center">
+                    <li class="navv-item"><a class="nav-link" href=""><strong>Home</strong></a></li>
+        <li class="navv-item dropdownn">
+          <a class="navv-link dropdown-toggle" href="" id="dropdown-a" data-toggle="dropdown"><strong>Products</strong></a>
+          <div class="dropdownn-menu" aria-labelledby="dropdown-a">
+            <a class="dropdownn-item" href="products.html">Solar Panels</a>
+            <a class="dropdownn-item" href="scaler-inverter.html">Solar Inverter</a>
+            <a class="dropdownn-item" href="scaler-battery.html">Solar Battery</a>
+          </div>
+        </li>
+        <li class="navv-item dropdown">
+          <a class="navv-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown"><strong>Solutions</strong></a>
+          <div class="dropdownn-menu" aria-labelledby="dropdown-a">
+            <a class="dropdownn-item" href="solarEpc.html">Solar EPC</a>
+            
+          </div>
+        </li>
+                    <li class="navv-item"><a class="navv-link" href="roomsdec.html"><strong></strong></a></li>
+                    <li class="navv-item"><a class="navv-link" href="index.html"><strong>ROI Calculator</strong></a></li>
+                    <li class="navv-item"><a class="navv-link" href="index.html"><strong>Gallery</strong></a></li>
+                    <li class="navv-item"><a class="navv-link" href="about.html"><strong>About Us</strong></a></li>
+                    <li class="navv-item"><a class="navv-link" href="contact.html"><strong>Contact Us</strong></a></li>
+                    <li class="navv-item"><button class="btn btn-primary btn-enquire-now"><a  href="contactus.html">ENQUIRE NOW</a></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+</header>
 
 
 <div class="cottages-wrapper">
